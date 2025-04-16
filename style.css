@@ -1,0 +1,157 @@
+/* Основные стили для сайта */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.contacts {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.schedule {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.schedule h4 {
+  margin-bottom: 10px;
+}
+
+.schedule p {
+  margin: 5px 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  /* Меню */
+  nav {
+    width: 100%; /* Меню будет занимать всю ширину экрана */
+    height: auto;
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav li {
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .contacts {
+    position: relative;
+    top: auto;
+    right: auto;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .schedule {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Дополнительные настройки для ещё меньших экранов */
+  header {
+    font-size: 16px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .contacts, .schedule {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 5px;
+  }
+}
